@@ -5,8 +5,7 @@ const Schema = mongoose.Schema
 const responSchema = new Schema({
   konten: String,
   thread: {type: Schema.Types.ObjectId, ref: "Thread"},
-  author: {type: Schema.Types.ObjectId, ref: "User"},
-  voter: [{type: Schema.Types.ObjectId, ref: "User"}]
+  author: {type: Schema.Types.ObjectId, ref: "User"}
 }, {
   timestamps: true
 })

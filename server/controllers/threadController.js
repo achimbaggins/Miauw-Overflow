@@ -1,5 +1,5 @@
 const Thread = require('../models/Thread');
-const ThreadVote = require('../models/ThreadV');
+const ThreadVote = require('../models/ThreadVote');
 const Respon = require('../models/Respon');
 const npmslug = require('achim-slug');
 
@@ -43,7 +43,7 @@ var vote = (req, res) => {
       .then(voteRemoved => res.send('voteRemoved'))
     } else {
       ThreadVote.create({thread: req.body.threadId, author: req.body.authorId})
-      .then{voteAdded => res.send('voteAdded')}
+      .then(voteAdded => res.send('voteAdded'))
     }
   })
 }
