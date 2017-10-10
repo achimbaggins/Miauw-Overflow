@@ -30,7 +30,11 @@ var getBySlug = (req, res) => {
     .populate('author', 'username')
     .then(resultRes => {
       result.push(resultRes)
-      res.send(result)
+      ThreadVote.find({thread: result[0]._id})
+      .then(hasilVote => {
+        result.push(hasilVote)
+        res.send(result)
+      })
     })
   })
 }

@@ -6,7 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "achim-slug": "^0.1.2",
+    "achim-slug": "^1.0.3",
     "body-parser": "~1.17.1",
     "cors": "^2.8.4",
     "express": "~4.15.2",
