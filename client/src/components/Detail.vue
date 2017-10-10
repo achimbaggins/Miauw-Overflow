@@ -8,12 +8,9 @@
           <button type="button" name="button"class="btn btn-primary" >
             <span class="glyphicon glyphicon-user"></span> by : {{detail.author.username.toUpperCase()}}
           </button>
-          <button type="button" name="button"class="btn btn-warning" @click="kirimVote"><span class="glyphicon glyphicon-heart"></span> disukai {{vote}} Orang. 
+          <button type="button" name="button"class="btn btn-warning" @click="kirimVote"><span class="glyphicon glyphicon-heart"></span> disukai {{vote}} Orang.
           </button>
 
-          <!-- <button type="button" class="btn btn-danger" name="button" v-if="idCreator == detail.author._id" @click="deleteThread(thread._id); clearMe()">
-            <span class="glyphicon glyphicon-trash"></span>
-          </button> -->
         </div>
       </div>
 

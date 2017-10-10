@@ -69,7 +69,10 @@ var destroy = (req, res) => {
   Thread.remove({_id:req.params.id})
   .then(ok => {
     Respon.remove({thread:req.params.id})
-    .then(resDel =>  res.send('data deleted'))
+    .then(resDel => {
+      ThreadVote.remove({thread:req.params.id})
+      .then(oke => res.send('data deleted'))
+    })
   })
 }
 
